@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Enhancement</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Custom CSS */
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+           padding-right: 100px;
+        }
+        .image-container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .image-container img {
+            max-width: 48%;
+            height: auto;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .image-label {
+            text-align: center;
+            margin-top: 10px;
+        }
+        .title {
+        color: whitesmoke;
+        font-size: 3.5rem;
+        font-weight: bolder;
+        margin-bottom: 3rem;
+      }
+      html{
+        scroll-behavior:smooth;
+    }
+      .text {
+        width: 50%;
+        margin: auto;
+        line-height: 2rem;
+      }
+      .container1 {
+        background: linear-gradient(
+          to bottom,
+          #12021b,
+          #240536,
+          #4d2148,
+          #520240
+        );
+        height: 100vh;
+        width: 100vw;
+      }
+      .container {
+        padding-top: 12%;
+
+        text-align: center;
+        color: white;
+        
+      }
+      .bton {
+        display: block;
+        margin-left: 100px;
+        width: fit-content;
+        border: 2px solid rgb(255, 69,0);
+        padding: 14px 50px;
+        border-radius: 7px;
+        text-decoration: none;
+        font-weight: bolder;
+        color: rgb(250, 248, 247);
+        transition: background 0.5s;
+      }
+      .bton:hover {
+        background: rgb(255,69,0);
+      }
+      .bton1 {
+        margin-left: -4px;
+        padding: 8px 30px;
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+          "Lucida Sans", Arial, sans-serif;
+      }
+      .container2 {
+        width: 100vw;
+        height: 100vh;
+        background: linear-gradient(
+          to bottom,
+          #ee95fa,
+          #f8d2f8,
+          #fac8f2,
+          #ef9efa
+        );
+      }
+      .row {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
+      .about-col-1 {
+        flex-basis: 35%;
+      }
+
+      .about-col-1 img {
+        width: 100%;
+        border-radius: 15px;
+      }
+      span {
+        margin: auto;
+        font-size: 1.4rem;
+        font-weight: bolder;
+        color: orangered;
+        margin-bottom: 2rem;
+      }
+
+      .maincont {
+        position: relative;
+        width: 350px;
+        height: 400px;
+        padding: 5px;
+      }
+      .thecard {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        transform-style: preserve-3d;
+        transition: all 0.5s ease;
+      }
+      .thecard:hover {
+        transform: rotateY(180deg);
+      }
+      .fc {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-radius: 20px;
+        backface-visibility: hidden;
+        color: white;
+        background: #520240;
+      }
+      .bc {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        padding: 10px;
+        color: white;
+        border-radius: 20px;
+        backface-visibility: hidden;
+        background: #27053b;
+        transform: rotateY(180deg);
+      }
+      .about-col-2 {
+        flex-basis: 60%;
+        margin-top: 4%;
+      }
+
+      .sub {
+        color: #27053b;
+        font-size: 45px;
+        font-weight: 600px;
+      }
+
+      .subcontainer {
+        padding: 8%;
+      }
+      .container3 {
+        width: 100vw;
+        height: 100vh;
+        background: linear-gradient(
+          to bottom,
+          #4d0a41,
+          #881e76,
+          #881c76,
+          #4b0b41
+        );
+        text-align: center;
+        font-family: Verdana, Geneva, Tahoma, sans-serif, monospace;
+        
+      }
+      .form-control-file{
+        display: block;
+        width: fit-content;
+        border: 2px solid rgb(255, 69,0);
+        padding: 14px 50px;
+        border-radius: 7px;
+        text-decoration: none;
+        font-weight: bolder;
+        color: rgb(250, 248, 247);
+        transition: background 0.5s;
+      }
+    </style>
+</head>
+<body>
+    <div class="container1">
+        <div class="container">
+          <span>LOW-LIGHT BOOST</span>
+          <div class="title">Escape the darkness</div>
+          <div class="text">
+            If there are details lost in a poorly lit image, this app will find
+            them. Using our state-of-the-art AI, you can restore light to images
+            that seem too dark to use.
+  
+            <a href="#upload" style="margin:auto;margin-top:3rem" class="bton bton1">Get Started</a>
+          </div>
+        </div>
+      </div>
+      <div class="container2">
+        <div>
+          <div class="subcontainer">
+            <div class="row">
+              <div
+                class="about-col-1"
+                data-aos="fade-right"
+                data-aos-offset="300"
+                data-aos-easing="ease-in-sine"
+              >
+                <div class="maincont">
+                  <div class="thecard">
+                    <div class="fc">
+                      <img
+                      src="C:\Users\pc\Desktop\papers\mini project\ours485\low\10.png"
+                     alt="low light image"
+                        height="400px"
+                        width="280px"
+                      />
+                    </div>
+                    <div class="bc">
+                      <img
+                        src=""
+                        alt="enhanced image"
+                        height="400px"
+                        width="280px"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="about-col-2"
+                data-aos="fade-left"
+                data-aos-offset="300"
+                data-aos-easing="ease-in-sine"
+              >
+                <h1 class="sub">Let there be light</h1>
+                <br />
+                <p style="line-height: 2rem; color: #520240">
+                  Taking photos in low-light environments presents its own
+                  problems , with images appearing dark, indistinct, and grainy.
+                  This app is the solution. Upload a photo that was taken in a
+                  poorly lit environment, our app convert it into a balanced,
+                  naturally lit image that restores its viability.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container3">
+    <div class="container" id="upload">
+        <h1 class="text-center">Image Enhancement</h1>
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <form id="uploadForm" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <input type="file" id="fileInput" name="file" class="form-control-file">
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Enhance</button>
+                </form>
+            </div>
+        </div>
+        <div id="result" class="image-container"></div>
+    </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        document.getElementById('uploadForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            var form = event.target;
+            var formData = new FormData(form);
+
+            fetch('/enhance', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.error) {
+                    alert(data.error);
+                } else {
+                    var resultDiv = document.getElementById('result');
+                    resultDiv.innerHTML = '';
+                    
+                    // Original Image
+                    var originalDiv = document.createElement('div');
+                    originalDiv.classList.add('text-center', 'col-md-6');
+                    var originalImage = document.createElement('img');
+                    originalImage.src = URL.createObjectURL(form['file'].files[0]);
+                    originalImage.classList.add('img-fluid');
+                    originalDiv.appendChild(originalImage);
+                    var originalLabel = document.createElement('div');
+                    originalLabel.classList.add('image-label');
+                    originalLabel.textContent = 'Original Image';
+                    originalDiv.appendChild(originalLabel);
+                    resultDiv.appendChild(originalDiv);
+                    
+
+                    // Enhanced Image
+                    var enhancedDiv = document.createElement('div');
+                    enhancedDiv.classList.add('text-center', 'col-md-6');
+                    var enhancedImage = document.createElement('img');
+                    enhancedImage.src = 'data:image/png;base64,' + data.enhanced_image;
+                    enhancedImage.classList.add('img-fluid');
+                    enhancedDiv.appendChild(enhancedImage);
+                    var enhancedLabel = document.createElement('div');
+                    enhancedLabel.classList.add('image-label');
+                    enhancedLabel.textContent = 'Enhanced Image';
+                    enhancedDiv.appendChild(enhancedLabel);
+                    resultDiv.appendChild(enhancedDiv);
+                }
+            })
+            .catch(error => console.error('Error:', error));
+        });
+    </script>
+</body>
+</html>
